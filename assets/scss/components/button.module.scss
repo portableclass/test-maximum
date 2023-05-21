@@ -1,0 +1,80 @@
+.button {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex: wrap;
+    cursor: pointer;
+    &-red {
+        font-family: 'TacticSans-Bold';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 120%;
+        text-align: center;
+        letter-spacing: 0.04em;
+        padding: 23px 127px;
+        color: var(--text-white);
+        background: var(--red);
+        border-radius: 8px;
+        &:hover {
+            color: var(--text-white);
+        }
+        &-big {
+            padding: 23px 133px;
+        }
+    }
+    &-transparent {
+        padding: 8px 20px;
+        border: 2px solid var(--dark-blue);
+        border-radius: 8px;
+        font-family: 'TacticSans-Medium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        color: var(--dark-blue);
+        background: var(--text-white);
+        &:hover {
+            color: var(--dark-grey);
+            border: 2px solid var(--dark-grey);
+        }
+        &-active {
+            background: var(--dark-grey);
+            &:hover {
+                color: var(--dark-blue);
+                background: var(--dark-grey);
+                border: 2px solid var(--dark-blue);
+            }
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .button {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        flex: wrap;
+        cursor: pointer;
+        &-red {
+            font-family: 'TacticSans-Bold';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 120%;
+            text-align: center;
+            letter-spacing: 0.04em;
+            padding: 23px 70px;
+            color: var(--text-white);
+            background: var(--red);
+            border-radius: 8px;
+            &:hover {
+                color: var(--text-white);
+            }
+            &-big {
+                padding: 23px 133px;
+            }
+        }
+    }
+}

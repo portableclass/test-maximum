@@ -1,0 +1,15 @@
+.carList {
+    &-wrapper {
+        display: flex;
+        min-width: 65%;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1215px) {
+    .carList {
+        &-wrapper {
+            min-width: 55%;
+        }
+    }
+}

@@ -9,19 +9,28 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "20.2.1",
-    "@types/react": "18.2.6",
-    "@types/react-dom": "18.2.4",
-    "eslint": "8.40.0",
-    "eslint-config-next": "13.4.3",
+    "@reduxjs/toolkit": "^1.9.5",
+    "abort-controller": "^3.0.0",
+    "bootstrap": "^5.2.3",
     "next": "13.4.3",
+    "next-redux-wrapper": "^8.1.0",
+    "node-fetch": "^3.3.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "sass": "^1.62.1",
-    "typescript": "5.0.4"
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
+    "@types/node": "^20.2.1",
+    "@types/node-fetch": "^2.6.4",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "css-modules": "^0.3.0",
+    "eslint": "^8.41.0",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.27.5"
+    "eslint-config-next": "^13.4.3",
+    "eslint-plugin-import": "^2.27.5",
+    "sass": "^1.62.1",
+    "typescript": "^5.0.4",
+    "typescript-plugin-css-modules": "^5.0.1"
   }
 }
