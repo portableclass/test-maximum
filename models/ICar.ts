@@ -14,10 +14,13 @@ export interface ICar {
         modelYear: string
         equipmentName: string
         equipmentVariantTransmissionType: string
+        equipmentVariantFuelType: string
         engine: {
             engineCapacity: number
             enginePower: number
         }
+        vin: string
+        autoPrice: number
     }
     photobank: {
         imgs: IImage[]

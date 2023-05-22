@@ -10,3 +10,10 @@
     letter-spacing: 0.03em;
     color: var(--dark-blue);
 }
+
+// remove
+@media (max-width: 390px) {
+    .title {
+        font-size: 20px;
+    }
+}

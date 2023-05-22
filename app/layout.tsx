@@ -1,7 +1,7 @@
 import { FC, ReactNode } from 'react'
 import { Metadata } from 'next'
 import Header from '@/components/Header'
-import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import '../assets/scss/globals.scss'
 
 type RootLayoutProps = {

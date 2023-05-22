@@ -12,7 +12,7 @@
         line-height: 120%;
         text-align: center;
         letter-spacing: 0.04em;
-        padding: 23px 127px;
+        padding: 23px 70px;
         color: var(--text-white);
         background: var(--red);
         border-radius: 8px;
@@ -20,6 +20,17 @@
             color: var(--text-white);
         }
         &-big {
+            font-family: 'TacticSans-Bold';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 120%;
+            text-align: center;
+            letter-spacing: 0.04em;
+            padding: 23px 70px;
+            color: var(--text-white);
+            background: var(--red);
+            border-radius: 8px;
             padding: 23px 133px;
         }
     }
@@ -52,29 +63,20 @@
 
 @media (max-width: 1600px) {
     .button {
-        display: flex;
-        align-items: center;
-        text-align: center;
-        flex: wrap;
-        cursor: pointer;
         &-red {
-            font-family: 'TacticSans-Bold';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 28px;
-            line-height: 120%;
-            text-align: center;
-            letter-spacing: 0.04em;
-            padding: 23px 70px;
-            color: var(--text-white);
-            background: var(--red);
-            border-radius: 8px;
-            &:hover {
-                color: var(--text-white);
-            }
-            &-big {
-                padding: 23px 133px;
-            }
+            padding: 23px 30px;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .button {
+        &-red {
+            font-size: 14px;
+        }
+        &-transparent {
+            padding: 4px 10px;
+            font-size: 12px;
         }
     }
 }

@@ -1,4 +1,4 @@
-import { FC, MouseEvent } from 'react'
+import { FC } from 'react'
 import styles from '../../assets/scss/components/button.module.scss'
 
 type ButtonProps = {
@@ -6,12 +6,14 @@ type ButtonProps = {
     type?: 'button' | 'submit' | 'reset'
     className?: string[]
     handleClick: (
-        e: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
+        e: any,
     ) => void
 }
 
 const Button: FC<ButtonProps> = props => {
-    const { title, type = 'button', className = [], handleClick } = props
+    const {
+        title, type = 'button', className = [], handleClick,
+    } = props
     return (
         <button
             // eslint-disable-next-line react/button-has-type

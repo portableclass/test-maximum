@@ -1,0 +1,142 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: var(--text-white);
+}
+
+.carPage {
+    &-wrapper {
+        display: flex;
+        padding: 40px 0px 83px 0px;
+        &-inside {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &-title-wrapper {
+        display: flex;
+        padding: 80px 0px 20px 0px;
+    }
+    &-vin {
+        display: flex;
+        align-items: center;
+        font-family: 'TacticSans-Medium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: var(--dark-grey);
+        margin-bottom: 40px;
+    }
+}
+
+.specs {
+    &-wrapper {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-right: 47px;
+    }
+    &-price {
+        &-wrapper {
+            display: flex;
+            width: 100%;
+            background: var(--light-blue);
+            border-radius: 12px;
+            padding: 20px 47px 20px 40px;
+        }
+        display: flex;
+        width: 100%;
+        align-items: center;
+        font-family: 'TacticSans-Black';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 130%;
+        letter-spacing: 0.05em;
+        color: var(--red);
+    }
+    &-warranty {
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            background: var(--light-blue);
+            border-radius: 12px;
+            padding: 20px 0px 20px 40px;
+            margin-top: 20px;
+        }
+        &-icon {
+            display: flex;
+            width: 26px;
+            height: 36px;
+            background-position: center;
+            background-repeat: no-repeat;
+            object-fit: cover;
+        }
+        &-desc {
+            display: flex;
+            font-family: 'TacticSans-Medium';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 140%;
+            letter-spacing: 0.02em;
+            margin-left: 20px;
+        }
+    }
+    &-title-wrapper {
+        padding: 60px 0px 30px 0px;
+    }
+    &-shorts {
+        &-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            flex-direction: column;
+            padding: 60px 20px 60px 60px;
+            background: var(--light-blue);
+            border-radius: 12px;
+            justify-content: space-between;
+        }
+        &-item {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            flex-direction: row;
+            &-icon {
+                display: flex;
+                width: 90px;
+                height: 90px;
+                background-position: center;
+                background-repeat: no-repeat;
+                object-fit: cover;
+            }
+            &-desc {
+                display: flex;
+                align-items: center;
+                font-family: 'TacticSans-Medium';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 140%;
+                letter-spacing: 0.02em;
+                color: var(--dark-blue);
+                margin-left: 40px;
+            }
+            &:nth-child(2n) {
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

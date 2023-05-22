@@ -3,7 +3,7 @@ const getData = async (brand: string) => {
         `https://maximum.expert/api/stock-test?brand=${brand}`,
         {
             next: {
-                revalidate: 15,
+                revalidate: 60,
             },
         },
     )

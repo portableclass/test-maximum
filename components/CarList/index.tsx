@@ -2,9 +2,9 @@
 
 import { FC } from 'react'
 import { ICar } from '@/models/ICar'
+import CarCard from '../CarCard'
 import stylesDef from '../../assets/scss/default.module.scss'
 import styles from '../../assets/scss/components/carList.module.scss'
-import CarCard from '../CarCard'
 
 type CarListProps = {
     list: ICar[]
@@ -15,14 +15,12 @@ const CarList: FC<CarListProps> = props => {
     return (
         <div
             className={[
-                // stylesDef.wrapper,
                 stylesDef['wrapper-column'],
-                // styles['carList-wrapper'],
+                'w-100',
             ].join(' ')}
         >
             <div
                 className={[
-                    // stylesDef.wrapper,
                     stylesDef['wrapper-row'],
                     styles['carList-wrapper'],
                 ].join(' ')}
@@ -33,6 +31,7 @@ const CarList: FC<CarListProps> = props => {
                         title={`${car.feedData.brandName} ${car.feedData.modelName} ${car.feedData.equipmentName}`}
                         desc={`${car.feedData.engine.engineCapacity} / ${car.feedData.engine.enginePower} Л.C. / ${car.feedData.equipmentVariantTransmissionType}`}
                         img={car.photobank.imgs[0].url}
+                        brand={car.feedData.brandName}
                         key={car._id}
                     />
                 ))}

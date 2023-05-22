@@ -4,8 +4,6 @@
     min-height: 100%;
     &-row {
         display: flex;
-        // width: 100%;
-        // height: 100%;
         flex-wrap: wrap;
         flex-direction: row;
     }
@@ -16,28 +14,20 @@
     }
     &-column {
         display: flex;
-        // width: 100%;
-        // height: 100%;
         flex-wrap: wrap;
         flex-direction: column;
     }
     &-column-reverse {
         display: flex;
-        // width: 100%;
-        // height: 100%;
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
     &-ai-center {
         display: flex;
-        // width: 100%;
-        // height: 100%;
         align-items: center;
     }
     &-jc-center {
         display: flex;
-        // width: 100%;
-        // height: 100%;
         justify-content: center;
     }
 }
@@ -51,5 +41,11 @@
 @media (max-width: 1260px) {
     .wrapper {
         width: 97%;
+    }
+}
+
+@media (max-width: 790px) {
+    .wrapper {
+        width: 95%;
     }
 }

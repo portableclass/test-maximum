@@ -18,7 +18,6 @@
 }
 
 .separator {
-    // display: flex;
     width: 2px;
     height: 100%;
     margin: 0px 20px;
@@ -37,4 +36,30 @@
     line-height: 150%;
     letter-spacing: 0.05em;
     color: var(--text-white);
+}
+
+@media (max-width: 390px) {
+    .header {
+        height: 54px;
+        padding: 15px 10px;
+    }
+    
+    .logo {
+        max-width: 111px;
+        max-height: 30px;
+    }
+    
+    .desc {
+        display: flex;
+        flex: wrap;
+        height: 100%;
+        align-items: center;
+        font-family: 'TacticSans-Medium';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        color: var(--text-white);
+    }
 }

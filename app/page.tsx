@@ -1,6 +1,3 @@
-'use client'
-
-import React, { FC } from 'react'
 import getOptionsByArray from '@/helpers/getOptionsByArray'
 import getDefaultBrands from '@/helpers/getDefaultBrands'
 import getData from '@/helpers/getData'
@@ -20,33 +17,18 @@ const Home = async () => {
             <div
                 className={[
                     stylesDef.wrapper,
-                    // stylesDef['wrapper-row'],
                     styles['home-title-wrapper'],
                 ].join(' ')}
             >
                 <Title title={`Автомобили ${brand} в СПб`} />
             </div>
             <div
-                className={[
-                    stylesDef.wrapper,
-                    // stylesDef['wrapper-row'],
-                    styles['home-wrapper'],
-                ].join(' ')}
+                className={[stylesDef.wrapper, styles['home-wrapper']].join(
+                    ' ',
+                )}
             >
-                <div
-                    className={[
-                        // stylesDef.wrapper,
-                        stylesDef['wrapper-column'],
-                        styles['home-wrapper-inside'],
-                    ].join(' ')}
-                >
-                    <Filter
-                        title='Бренд'
-                        values={brands}
-                        currentValue=''
-                        // handleClick={() => {}}
-                        useBtn={false}
-                    />
+                <div className={[styles['home-wrapper-inside']].join(' ')}>
+                    <Filter title='Бренд' values={brands} currentValue='' />
                     <CarList list={res.list} />
                 </div>
             </div>

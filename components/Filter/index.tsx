@@ -1,21 +1,31 @@
+'use client'
+
 import { FC } from 'react'
+import Link from 'next/link'
 import { SelectOptions } from '@/helpers/getOptionsByArray'
 import stylesDef from '../../assets/scss/default.module.scss'
 import stylesButton from '../../assets/scss/components/button.module.scss'
 import styles from '../../assets/scss/components/filter.module.scss'
 import Button from '../Button'
-import Link from 'next/link'
 
 type FilterProps = {
     title: string
     values: SelectOptions[]
     currentValue: number | string
     handleClick?: (opt: SelectOptions) => void
-    useBtn: boolean
+    useBtn?: boolean | undefined
+    remove?: boolean | undefined
 }
 
 const Filter: FC<FilterProps> = props => {
-    const { title, values, currentValue, handleClick, useBtn } = props
+    const {
+        title,
+        values,
+        currentValue,
+        handleClick,
+        useBtn = false,
+        remove = false,
+    } = props
 
     const checkCurrentValue = (val: string | number): string[] => {
         return val === currentValue
@@ -23,18 +33,21 @@ const Filter: FC<FilterProps> = props => {
             : []
     }
 
+    const checkRemove = remove ? styles.remove : ''
+
+    const handleBtn = () => {}
+
     return (
         <div
             className={[
                 stylesDef['wrapper-column'],
-                // stylesDef['wrapper-ai-center']
                 styles['filter-wrapper'],
+                checkRemove,
             ].join(' ')}
         >
             <div
                 className={[
-                    stylesDef['wrapper-row'],
-                    // stylesDef['wrapper-ai-center']
+                    stylesDef['wrapper-column'],
                     styles['filter-wrapper-inside'],
                 ].join(' ')}
             >
@@ -49,11 +62,7 @@ const Filter: FC<FilterProps> = props => {
                         return useBtn ? (
                             <Button
                                 title={value.label}
-                                handleClick={
-                                    handleClick
-                                        ? () => handleClick(value)
-                                        : () => undefined
-                                }
+                                handleClick={handleBtn}
                                 className={[
                                     stylesButton['button-transparent'],
                                     styles['options-button'],
